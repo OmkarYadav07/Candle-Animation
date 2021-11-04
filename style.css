@@ -1,0 +1,84 @@
+/*@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);*/
+body{
+  background-color: rgb(0, 0, 0);
+  /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk89l_XJxAA-RG94ANd6iiRmQGN_7e_FCUoQ&usqp=CAU'); */
+}
+
+/* This is for the box */
+.frame {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 5px;
+  box-shadow: 4px 8px 16px 0 rgba(226, 21, 21, 0.1);  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  overflow: hidden;
+  background: #2d3f50;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* This is for the whole candle structure */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); /* X-axis & Y-axis */
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* This is for the aag */
+  .light {
+    width: 20px;
+    height: 20px;
+    background: #fdac2a;
+    border-radius: 10px 10px 20px 20px; /* top-left,top-right,bottom-right,bottom-left */
+    box-shadow: 0 0 20px #fdac2acc;
+    animation: 2s flicker ease-in-out infinite;
+  }
+
+  /* This is for the kandi below aag */
+  .wick {
+    width: 5px;
+    height: 8px;
+    background: #b6909b;
+  }
+
+  /* This is for the white area of the candle */
+  .candle {
+    width: 80px;
+    height: 120px;
+    border-radius: 5px;
+    background:white;
+  }
+  /* This is for the holder nnwhich holds the whole candle */
+  .holder {
+    width: 140px;
+    height: 10px;
+    border-radius: 4px;
+    background: #1b243d;
+  }
+
+
+@keyframes flicker {
+  0%,
+  100% {
+    border-radius: 40px 10px 20px 20px;
+    transform: scale(1);
+  }
+  25%,
+  75% {
+    border-radius: 10px 40px 20px 20px;
+  }
+  50% {
+    border-radius: 40px 10px 20px 20px;
+    transform: scale(0.8, 1.2);
+  }
+}
