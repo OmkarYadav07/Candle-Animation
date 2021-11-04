@@ -34,7 +34,7 @@ body{
   align-items:center;
 }
 
-/* This is for the aag */
+/* This is for the Flame*/
   .light {
     width: 20px;
     height: 20px;
@@ -44,7 +44,7 @@ body{
     animation: 2s flicker ease-in-out infinite;
   }
 
-  /* This is for the kandi below aag */
+  /* This is for the stick below flame */
   .wick {
     width: 5px;
     height: 8px;
@@ -58,7 +58,7 @@ body{
     border-radius: 5px;
     background:white;
   }
-  /* This is for the holder nnwhich holds the whole candle */
+  /* This is for the holder of the candle*/
   .holder {
     width: 140px;
     height: 10px;
